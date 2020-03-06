@@ -1,0 +1,40 @@
+
+Showing logs for build [32mwei91004org-environment-wei9100-296qs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-qjgx4[0m
+{"level":"warn","ts":1583471733.4911187,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583471733.4918566,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mwei91004org-environment-wei9100-296qs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-dblms[0m
+{"level":"warn","ts":1583471734.3113875,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1583471734.3149042,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mwei91004org-environment-wei9100-296qs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mwei91004org-environment-wei9100-296qs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-wei91004org-environment-wei9100-296qs-jtk9g[0m
+{"level":"warn","ts":1583471739.4753249,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1583471740.280445,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/wei91004org/environment-wei91004-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mwei91004org-environment-wei9100-296qs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:6205ba8bd7cb21088bb89e074460e0ea0c1710b2,2:165ad192b510701b970bb24482dd752c6b0d6f6f
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 165ad192b510701b970bb24482dd752c6b0d6f6f: 6205ba8bd7cb21088bb89e074460e0ea0c1710b2:
+DEBUG: ran git fetch --unshallow origin 165ad192b510701b970bb24482dd752c6b0d6f6f: 6205ba8bd7cb21088bb89e074460e0ea0c1710b2: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 6205ba8bd7cb21088bb89e074460e0ea0c1710b2
+DEBUG: ran git reset --hard 6205ba8bd7cb21088bb89e074460e0ea0c1710b2 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 165ad192b510701b970bb24482dd752c6b0d6f6f
+DEBUG: ran git merge 165ad192b510701b970bb24482dd752c6b0d6f6f in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 6205ba8bd7cb21088bb89e074460e0ea0c1710b2..HEAD
+Merged SHA 165ad192b510701b970bb24482dd752c6b0d6f6f with commit message 'chore: Promote skiapp to version 0.0.43' into base branch master
+
+Showing logs for build [32mwei91004org-environment-wei9100-296qs-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
